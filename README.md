@@ -9,11 +9,10 @@ After you download the application, you have to follow the following steps to in
 3. Apply migrations with console command yii migrate. This will create tables needed for the application to work.
 4. Yii migrate command will create tables in database automatically.
 
+## Trying it Out
 
+### For Posts
 
-#Trying it Out
-
-For posts
 1. GET /posts: list all posts page by page;
 2. HEAD /posts: show the overview information of post listing;
 3. POST /posts: create a new post (required information title,description,username,email); 
