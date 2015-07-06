@@ -1,0 +1,23 @@
+Message-ID: <f780f6a964b074ffacb7176989b5404b@localhost>
+Date: Mon, 06 Jul 2015 10:37:13 +0200
+Subject: Message subject
+From: admin@yopmail.com
+To: aftab@yopmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1436171833_96a5f1f1f84139d8c86fb1982e0f098b_=_"
+
+
+--_=_swift_v4_1436171833_96a5f1f1f84139d8c86fb1982e0f098b_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain text content
+
+--_=_swift_v4_1436171833_96a5f1f1f84139d8c86fb1982e0f098b_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_v4_1436171833_96a5f1f1f84139d8c86fb1982e0f098b_=_--

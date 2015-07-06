@@ -1,0 +1,23 @@
+Message-ID: <cc63a163a5422bc361eec4fd6d0287a6@localhost>
+Date: Mon, 06 Jul 2015 10:38:14 +0200
+Subject: Message subject
+From: admin@yopmail.com
+To: aftabafzaal@live.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1436171894_72837cd62e81417e297d354835b7e2c8_=_"
+
+
+--_=_swift_v4_1436171894_72837cd62e81417e297d354835b7e2c8_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain text content
+
+--_=_swift_v4_1436171894_72837cd62e81417e297d354835b7e2c8_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_v4_1436171894_72837cd62e81417e297d354835b7e2c8_=_--
