@@ -1,0 +1,832 @@
+2015-07-06 15:02:33 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('up')
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255),
+	`email` varchar(255) NOT NULL,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('up')
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2015-07-06 15:02:23 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436187743.6806
+    'REQUEST_TIME' => 1436187743
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+        2 => 'up'
+    ]
+    'argc' => 3
+]
+2015-07-06 15:06:14 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255),
+	`email` varchar(255) NOT NULL,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2015-07-06 15:06:10 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436187970.4508
+    'REQUEST_TIME' => 1436187970
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-07-06 15:06:18 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('up')
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255),
+	`email` varchar(255) NOT NULL,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m130524_201442_init.php(27): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m130524_201442_init->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('up')
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2015-07-06 15:06:16 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436187976.6428
+    'REQUEST_TIME' => 1436187976
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+        2 => 'up'
+    ]
+    'argc' => 3
+]
+2015-07-06 16:04:00 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(391): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(36): yii\db\Migration->addForeignKey('fk_tag_id', 'posts_tags', 'tag_id', 'tags', 'id', 'CASCADE')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint
+The SQL being executed was: ALTER TABLE `posts_tags` ADD CONSTRAINT `fk_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `po...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(391): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(36): yii\db\Migration->addForeignKey('fk_tag_id', 'posts_tags', 'tag_id', 'tags', 'id', 'CASCADE')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1215
+    [2] => Cannot add foreign key constraint
+)
+
+2015-07-06 16:03:55 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436191435.924
+    'REQUEST_TIME' => 1436191435
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-07-06 16:04:14 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#2 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php:163
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#3 {main}
+2015-07-06 16:04:14 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436191454.0361
+    'REQUEST_TIME' => 1436191454
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]
+2015-07-06 16:04:43 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#2 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php:163
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#3 {main}
+2015-07-06 16:04:43 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436191483.5887
+    'REQUEST_TIME' => 1436191483
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]
+2015-07-06 16:04:50 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#2 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "init".' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php:163
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('init', Array)
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#3 {main}
+2015-07-06 16:04:50 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436191489.9971
+    'REQUEST_TIME' => 1436191489
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]
+2015-07-06 16:05:02 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'posts' already exists' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(25): yii\db\Migration->createTable('{{%posts}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'posts' already exists
+The SQL being executed was: CREATE TABLE `posts` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(30) NOT NULL,
+	`title` varchar(30) NOT NULL,
+	`description` text NOT NULL,
+	`email` varchar(50) NOT NULL,
+	`created` datetime,
+	`modified` datetime
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `p...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(248): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(25): yii\db\Migration->createTable('{{%posts}}', Array, 'CHARACTER SET u...')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'posts' already exists
+)
+
+2015-07-06 16:04:57 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436191497.4625
+    'REQUEST_TIME' => 1436191497
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-07-06 16:22:27 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(391): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(36): yii\db\Migration->addForeignKey('fk_tag_id', 'posts_tags', 'tag_id', 'tags', 'id', 'CASCADE')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint
+The SQL being executed was: ALTER TABLE `posts_tags` ADD CONSTRAINT `fk_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE' in D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `po...')
+#1 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\db\Migration.php(391): yii\db\Command->execute()
+#2 D:\xampp\htdocs\lazadatest\console\migrations\m150706_124929_create_post_tables.php(36): yii\db\Migration->addForeignKey('fk_tag_id', 'posts_tags', 'tag_id', 'tags', 'id', 'CASCADE')
+#3 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(492): m150706_124929_create_post_tables->up()
+#4 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m150706_124929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\lazadatest\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\lazadatest\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1215
+    [2] => Cannot add foreign key constraint
+)
+
+2015-07-06 16:22:24 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aftab\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'AFTAB-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aftab'
+    'LOCALAPPDATA' => 'C:\\Users\\Aftab\\AppData\\Local'
+    'LOGONSERVER' => '\\\\AFTAB-PC'
+    'mysql' => 'D:\\xampp\\mysql\\bin\\mysql.exe'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C:\\Program Files (x86)\\Common Files\\Adobe\\AGL;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 37 Stepping 5, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2505'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aftab\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Aftab-PC'
+    'USERNAME' => 'Aftab'
+    'USERPROFILE' => 'C:\\Users\\Aftab'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_NAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'SCRIPT_FILENAME' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'PATH_TRANSLATED' => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1436192544.7214
+    'REQUEST_TIME' => 1436192544
+    'argv' => [
+        0 => 'd:\\xampp\\htdocs\\lazadatest\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
